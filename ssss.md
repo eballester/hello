@@ -1,5 +1,5 @@
 
-
+```mermaid
 graph TD
     %% Secció Global
     subgraph Global
@@ -150,3 +150,4 @@ graph TD
     PE_SFTP -- "Accés Privat" --> StorageSFTP;
     PE_KV -- "Accés Privat" --> KeyVault;
     PE_CR -- "Accés Privat" --> ContainerRegistry;
+```
