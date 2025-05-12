@@ -35,7 +35,7 @@ graph TD
     %% Secció Regional - West Europe
     subgraph West Europe
 
-        subgraph Xarxa Virtual (Implicita)
+        subgraph Xarxa Virtual
             direction LR
 
             AG[Application Gateway<br>pal-pre-appgateway-001]
@@ -67,7 +67,7 @@ graph TD
             ACAEnv --> PE_CR;
 
 
-        end %% End VNet
+        end 
 
         subgraph Capa de Càlcul
             ACA_API[Aplicació Contenidora<br>palprecappapi001]
@@ -120,12 +120,12 @@ graph TD
         ACA_Transp --> AppInsights;
         SWA_Admin --> AppInsights;
         SWA_Transp --> AppInsights;
-        VM --> AppInsights; % Si instrumentada
+        VM --> AppInsights; 
 
         AppInsights --> LogAnalytics;
-        ACAEnv --> LogAnalytics; % Logs plataforma
-        VM --> LogAnalytics; % Logs VM
-        AG --> LogAnalytics; % Logs AG
+        ACAEnv --> LogAnalytics; 
+        VM --> LogAnalytics; 
+        AG --> LogAnalytics; 
 
 
         VNet -- "Resolving Private DNS" --> Link_DB;
@@ -134,12 +134,12 @@ graph TD
         VNet -- "Resolving Private DNS" --> Link_Gencat;
         VNet -- "Resolving Private DNS" --> Link_Intranet;
 
-    end %% End West Europe
+    end 
 
     %% Connexions entre Global i Regional
-    FD --> AG; % Trànsit dinàmic/API
-    FD --> SWA_Admin; % Trànsit estàtic
-    FD --> SWA_Transp; % Trànsit estàtic
+    FD --> AG; 
+    FD --> SWA_Admin; 
+    FD --> SWA_Transp; 
 
     LogAnalytics --> AI_Global;
 
